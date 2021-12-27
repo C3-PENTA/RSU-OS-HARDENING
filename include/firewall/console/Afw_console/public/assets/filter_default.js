@@ -35,4 +35,22 @@ $.extend({
 			}
 		});
 	},
-})
+
+    "apply_rule": function()
+	{
+		$.ajax({
+			url: "/filter/list/apply_rule",
+			dataType: "json",
+			type: "POST",
+			success: function(res){
+				if(res.result == "success"){
+					alert("Success");	
+				}else{
+					alert("fail");	
+				}
+			},error: function(res){
+				console.log(res);	
+			}
+		});
+	}
+});

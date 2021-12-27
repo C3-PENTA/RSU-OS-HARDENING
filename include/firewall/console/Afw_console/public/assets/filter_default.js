@@ -10,4 +10,8 @@ $(document).ready(function(){
 		$.send_packet(idx);
 	});
 
+    $(".action_apply_rule").click(function(){
+		$.apply_rule();
+	});
+
 });

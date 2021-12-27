@@ -15,3 +15,24 @@ $(document).ready(function(){
 	});
 
 });
+
+$.extend({
+    "send_packet": function(idx){
+		$.ajax({
+			url: "/filter/list/send_packet",
+			dataType: "json",
+			data: {"idx": idx},
+			type: "POST",
+			success: function(res){
+
+				if(res.result == "send success"){
+					alert("Success");	
+				}else{
+					alert("fail");	
+				}
+			},error: function(res){
+				console.log(res);	
+			}
+		});
+	},
+})

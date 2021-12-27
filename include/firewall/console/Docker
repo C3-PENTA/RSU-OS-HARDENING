@@ -1,0 +1,16 @@
+FROM ubuntu:16.04
+
+RUN apt-get -y update && apt-get -y upgrade
+RUN apt-get install -y apache2
+RUN apt-get install -y curl php7.0 php7.0-curl php7.0-json libapache2-mod-php7.0
+
+COPY ./afw_console /root/penta/autocrypt_afw
+
+RUN chmod +rx /root
+RUN chmod +x /root/penta/autocrypt_afw/apachectl.sh
+
+RUN a2enmod rewrite
+RUN cp /root/penta/autocrypt_afw/virtualhost.conf /etc/apache2/sites-available/000-default.conf
+RUN a2ensite 000-default.conf
+
+CMD /usr/sbin/apache2ctl -D FOREGROUND

@@ -14,4 +14,9 @@ class moduleLoader
         $module = getDir( $path );
         return $module;
     }
+
+    private function setModuleList( $list )
+    {
+        return $list;
+    }
 }

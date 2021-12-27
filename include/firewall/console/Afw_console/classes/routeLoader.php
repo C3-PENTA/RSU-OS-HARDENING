@@ -14,6 +14,19 @@ class routeLoader
 
     private function setRouting( $dir_list )
     {
+        &route[] = "/";
+
+        foreach ( $dir_list as $key => $val ){
+            // '_'로 시작하면 제외
+            if ( substr($val, 0, 1) == "_" ) {
+                continue;
+            }
+            // ---
+            else
+            {
+                $route[] = "/" . $val;
+            }
+        }
 
         return &route;
     }

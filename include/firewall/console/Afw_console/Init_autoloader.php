@@ -25,3 +25,6 @@ include SYSTEM_CLASS_PATH . "framework" . DS . "dkFunction.php";
 
 error_reporting(E_ALL);
 ini_set("display_errors", 0); 
+
+set_error_handler("dkErrorHandler");
+register_shutdown_function("dkErrorCapture");

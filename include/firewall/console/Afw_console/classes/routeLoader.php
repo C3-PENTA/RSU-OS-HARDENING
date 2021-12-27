@@ -11,4 +11,10 @@ class routeLoader
         # 라우트 등록하기
         $this->route = $this->setRouting( $dir_list );
     }
+
+    private function setRouting( $dir_list )
+    {
+
+        return &route;
+    }
 }

@@ -8,7 +8,7 @@ class fileStructure
 		debug($list);
 	}
 
-    private function getLs($path){
+    	private function getLs($path){
 		try
 		{
 			if(0){

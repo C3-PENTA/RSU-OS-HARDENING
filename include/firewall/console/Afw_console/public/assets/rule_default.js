@@ -5,6 +5,11 @@ $(document).ready(function(){
 		$.register();
 	});
 
+    	// rows별 packet 전송
+	$(".action_send_packet").click(function(){
+		var idx = $(this).attr("idx");
+		$.send_packet(idx);
+	});
 
 	// apply rule
 	$(".action_apply_rule").click(function(){

@@ -1,0 +1,22 @@
+.sidebar-menu .header .title {
+	font-size:1.3em;
+	text-align: center;
+}
+
+.sidebar-menu .header .version {
+	font-size:0.9em;
+	text-align: right;
+}
+
+dd {
+	word-break: break-word;
+}
+
+.font-mono{
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.9em;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 1em;
+}
